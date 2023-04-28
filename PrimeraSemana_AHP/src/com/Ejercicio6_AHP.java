@@ -1,0 +1,36 @@
+package com;
+
+import java.util.Scanner;
+
+public class Ejercicio6_AHP {
+
+	public static void main(String[] args) {
+		/*6. La asociación de vinicultores tiene como política fijar un precio inicial al kilo de uva, la cual se 
+		clasifica en tipos (A y B), y además en tamaños (1 y 2). Cuando se realiza la venta del producto, ésta 
+		es de un sólo tipo y tamaño, se requiere determinar cuánto recibirá un productor por la uva que 
+		entrega en un embarque considerando lo siguiente:
+		Si es de tipo A, se le cargan 20 céntimos al precio inicial cuando es de tamaño 1 y 30 céntimos si 
+		es de tamaño 2.
+		Si es de tipo B, se rebajan 30 céntimos cuando es de tamaño 1, y 50 céntimos cuando es de 
+		tamaño 2.
+		Precio inicial se recibe desde teclado
+		*/
+
+		double Precio; 
+		Scanner input = new Scanner(System.in);
+		System.out.println("Introduce el precio inicial: ");
+		Precio = input.nextDouble();
+		input.close();
+		
+
+	double TA1 = Precio + 0.2 ;
+	double TA2 = Precio + 0.3 ;
+	double TB1 = Precio - 0.3 ;
+	double TB2 = Precio - 0.5 ;
+	System.out.println("Tipo A tamaño 1 = " + TA1 );
+	System.out.println("Tipo A tamaño 2 = " + TA2 );
+	System.out.println("Tipo B tamaño 1 = " + TB1 );
+	System.out.println("Tipo B tamaño 2 = " + TB2 );
+
+}
+}
